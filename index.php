@@ -4,12 +4,30 @@
 //https://inssa.com.co/lp/apex/?utm_source=ob&utm_campaign=ics&utm_channel=dev#form
 //https://inssa.com.co/lp/apex/?utm_source=ob&utm_campaign=ika&utm_channel=dev
 //https://inssa.com.co/lp/apex/?utm_source=ob&utm_campaign=ics&utm_channel=dev
-//https://inssa.com.co/lp/apex/?utm_source=ob&utm_medium=correo&utm_campaign=hospitalario&utm_channel=dev#form
+
+//// hojas de producto
+//https://inssa.com.co/lp/apex/?utm_source=ob&utm_medium=correo&utm_campaign=hospitalario
+
+
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+  header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado
+ 
+
+
+
+  "<script language=\"JavaScript\">
+
+  alert(\"La resolución de tu pantalla es: \" + screen.width + \" x \" + screen.height)
+  
+</script>";
+ 
+  
 
 $version = ' V.6.03';
 $source = $_GET['utm_source'];
 $campaign = $_GET['utm_campaign'];
 $channel = $_GET['utm_channel'];
+$medium = $_GET['utm_medium'];
 
 $titulo = '';
 $banner_b1_l1 = '';
@@ -17,21 +35,97 @@ $banner_b1_l2 = '';
 $banner_b1_l3 = '';
 $banner_i1 = '';
 
+
+
+
+
 switch ($campaign) {
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////
     case 'bari':
-        $titulo = 'BARI';
-        $banner_b1_l1 = 'LÍNEA HORECA';
-        $banner_b1_l2 = 'Moderniza tu negocio!';
-        $banner_b1_l3 = 'BARI';
-        $banner_i1 = 'img/Banner-Bari.jpg';
+        
         break;
+
+        ///////////////////////////////////////////////////////////////////////////////////////////7
+
+
     case 'ika':
+
+      switch ($medium) {
+        case "correo":
+          $navbar = "style = \"display: none\"";
+          break;
+
+      }
+
+       //Primer banner start
         $titulo = 'IKA';
         $banner_b1_l1 = 'NUEVA LíNEA';
         $banner_b1_l2 = 'Dispensadoras automáticas';
         $banner_b1_l3 = 'IKA';
         $banner_i1 = 'img/Banner-IKA.jpg';
+        
+       
+        //Primer banner end
+
+        //Segundo banner start
+        $banner_b2_b1 = "¿Por qué comprar una dispensadora IKA?";
+        $banner_b2_b2 = "Es un negocio rentable y eficiente, no debes pensar en locales, remodelaciones, decoración, 
+        estantería, ni personal.
+        Con capacitación, asesoria, tu producto y tu dispensadora IKA, estás listo para obtener,
+        ganancias 24/7, entregas 100% automatizadas, retorno de inversión y control total de tu operación.";
+        $banner_b2_b3_b1 = "Servicio automático.";
+        $banner_b2_b3_b2 = "Ventas 24/7.";
+        $banner_b2_b3_b3 = "Fácil de manejar.";
+        $banner_i2 = 'img/Inssa.jpg';
+        //Segundo banner end
+
+        //Tercer banner start
+        $banner_b3_b1 = "La Línea IKA es mucho más que dispensadoras modernas, y de la más alta calidad.";
+        
+
+        $imagen_cata1 = "img/IKA-3-AMBIENTE.png";
+        $banner_b3_p1 = " El mejor servicio técnico pos venta del mercado para tu dispensadora.";
+
+        $imagen_cata2 = "img/IKA-3-COMBI.png";
+        $banner_b3_p2 = "100% especializada y personalizada para la estrategia de tu negocio.";
+
+        $imagen_cata3 = "img/IKA-4-AMBIENTE.png";
+        $banner_b3_p3 = "De proveedores y profesionales del vending, brindando respaldo para su 
+        dispensadora en cualquier momento.";
+
+        $imagen_cata4 = "img/IKA-4-E-M-COMBI.png";
+        $banner_b3_p4 = "De 40 años siendo líderes en brindar soluciones en el mercado del vending.";
+
+        $imagen_cata5 = "img/IKA-5-COMBI.png";
+        $banner_b3_p5 = "Con un equipo especializado en desarrollar 
+        soluciones tecnológicas, para controlar y automatizar su operación.";
+
+        $imagen_cata6 = "img/IKA-CONGELADOS.png";
+        $banner_b3_p6 = "IKA es venta, transporte, asesoría, servicio, respaldo y tecnología a nivel nacional.";
+
+          $Prod1 = "style = \"display: block\"";
+          $Prod2 = "style = \"display: block\"";
+          $Prod3 = "style = \"display: block\"";
+          $Prod4 = "style = \"display: block\"";
+          $Prod5 = "style = \"display: block\"";
+          $Prod6 = "style = \"display: block\"";
+        //Tercer banner end
+
+        //Form start
+        $baner_i3 = "style=\"background-image: url('./img/hospitalario/team-of-young-specialist-doctors-standing-in-the-corridor-of-the-hospital.jpg')\"";
+        //Form end
+
+        $color_boton = "color_boton";
+        $text_primary = "text-primary";
+        $a = "a";
+        $border_primary = "border-primary";
+        $service_text = "service-text";
+        $service_item = "service-item";
+        
         break;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
     case 'ics':
         $titulo = 'ICS';
         $banner_b1_l1 = 'TECNOLOGÍA';
@@ -40,12 +134,42 @@ switch ($campaign) {
         $banner_i1 = 'img/Banner-ICS.jpg';
         break;
 
+        /////////////////////////////////////////////////////////////////////////////
+
     case 'hospitalario':
+
+      switch ($medium) {
+        case "correo":
+          $navbar = "style = \"display: none\"";
+          break;
+
+      }
+
+      /* "<script language=\"JavaScript\">
+
+      alert(\"La resolución de tu pantalla es: \" + screen.width + \" x \" + screen.height)
+      
+    </script>"; */
+     
+      $phpVar = "Hello";
+     
+       
+      
+    
+
+
+
+
+      
+
+      
+
+      
         $titulo = 'hospitalario';
         //Primer banner start
         $banner_b1_l1 = 'EAS HOSPITALARIO';
         $banner_b1_l2 = 'ENTREGA AUTOMÁTICA DE DOTACIÓN HOSPITALARIA.';
-        $banner_b1_l3 = '';
+        
         $banner_i1 = 'img/hospitalario/portrait-of-female-woman-nurse-surgeon-or-staff-member-dressed-in-surgical-scrubs-gown-mask-and-hair-net-in-hospital-operating-room-theater.jpg';
         //Primer banner end
 
@@ -60,17 +184,46 @@ switch ($campaign) {
 
         //Tercer banner start
         $banner_b3_b1 = "Otros productos para el control y entrega automática de dotación hospitalaria.";
-        $color_peq = "background-color: #2BBBEE !important;";
-        $imagen_cata1 = "img/hospitalario/Producto-GABINETE-INTELIGENTE.png";
+        
+        $imagen_cata1 = "img/hospitalario/Producto-GABINETE-INTELIGENTE.png";  //imagen del catalogo fija
+        $imagen_cata1_sen = "onmouseover=\"this.src='img/hospitalario/smart-box--sensación.jpg';\""; //imagen del catalogo cambia con puntero
+        $imagen_cata1_out = "onmouseout=\"this.src='img/hospitalario/Producto-GABINETE-INTELIGENTE.png';\""; //imagen del catalogo vuelve a la fija
         $banner_b3_p1 = "Smart box monitorea y registra la entrega y devolución de insumos hospitalarios
                         de gran tamaño y valormáquinaria como monitores cardiacos, instrumental quirúrgico
-                        y más.";
-        $imagen_cata2 = "img/hospitalario/Producto-MD.png";
+                        y más.";    
+
+        $imagen_cata2 = "img/hospitalario/Producto-MD.png";//imagen del catalogo fija
+        $imagen_cata2_sen = "onmouseover=\"this.src='img/hospitalario/smart-box--sensación.jpg';\"";//imagen del catalogo cambia con puntero
+        $imagen_cata2_out = "onmouseout=\"this.src='img/hospitalario/Producto-MD.png';\""; //imagen del catalogo vuelve a la fija
         $banner_b3_p2 = "Dispositivo de identificación que sumado al software ICS, permite identificar al
                         usuario y registrar las devoluciones de los productos retirados previamente de la
                         dispensadora EAS";
-        $imagen_cata3 = "img/hospitalario/Producto-STORE---S.png";
+
+        $imagen_cata3 = "img/hospitalario/Producto-STORE---S.png";//imagen del catalogo fija
+        $imagen_cata3_sen = "onmouseover=\"this.src='img/hospitalario/store.jpg';\"";//imagen del catalogo cambia con puntero
+        $imagen_cata3_out = "onmouseout=\"this.src='img/hospitalario/Producto-STORE---S.png';\""; //imagen del catalogo vuelve a la fija
         $banner_b3_p3 = "Es un software que permite gestionar la entrega de dotaciones y suministros,
+                        utilizando un método de identificación “escáner” para llevar el control por
+                        usuarios y por productos a entregar.";
+
+        $imagen_cata4 = "img/hospitalario/Producto-GABINETE-INTELIGENTE.png";  //imagen del catalogo fija
+        $imagen_cata4_sen = "onmouseover=\"this.src='img/hospitalario/smart-box--sensación.jpg';\""; //imagen del catalogo cambia con puntero
+        $imagen_cata4_out = "onmouseout=\"this.src='img/hospitalario/Producto-GABINETE-INTELIGENTE.png';\""; //imagen del catalogo vuelve a la fija
+        $banner_b3_p4 = "Smart box monitorea y registra la entrega y devolución de insumos hospitalarios
+                        de gran tamaño y valormáquinaria como monitores cardiacos, instrumental quirúrgico
+                        y más.";    
+
+        $imagen_cata5 = "img/hospitalario/Producto-MD.png";//imagen del catalogo fija
+        $imagen_cata5_sen = "onmouseover=\"this.src='img/hospitalario/smart-box--sensación.jpg';\"";//imagen del catalogo cambia con puntero
+        $imagen_cata5_out = "onmouseout=\"this.src='img/hospitalario/Producto-MD.png';\""; //imagen del catalogo vuelve a la fija
+        $banner_b3_p5 = "Dispositivo de identificación que sumado al software ICS, permite identificar al
+                        usuario y registrar las devoluciones de los productos retirados previamente de la
+                        dispensadora EAS";
+
+        $imagen_cata6 = "img/hospitalario/Producto-STORE---S.png";//imagen del catalogo fija
+        $imagen_cata6_sen = "onmouseover=\"this.src='img/hospitalario/store.jpg';\"";//imagen del catalogo cambia con puntero
+        $imagen_cata6_out = "onmouseout=\"this.src='img/hospitalario/Producto-STORE---S.png';\""; //imagen del catalogo vuelve a la fija
+        $banner_b3_p6 = "Es un software que permite gestionar la entrega de dotaciones y suministros,
                         utilizando un método de identificación “escáner” para llevar el control por
                         usuarios y por productos a entregar.";
 
@@ -85,7 +238,19 @@ switch ($campaign) {
         //Form start
         $baner_i3 = "style=\"background-image: url('./img/hospitalario/team-of-young-specialist-doctors-standing-in-the-corridor-of-the-hospital.jpg')\"";
         //Form end
+        
+        $color_boton = "color_boton_hos";
+        $text_primary = "text-primary_hos";
+        $a = "a_hos";
+        $border_primary = "border-primary_hos";
+        $service_text = "service-textH";
+        $service_item = "service-itemH";
+
+
         break;
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
 
         case 'EPP':
           $titulo = 'asdasdad';
@@ -107,9 +272,22 @@ switch ($campaign) {
   
           //Tercer banner start
           $banner_b3_b1 = "Otros productos para el control y entrega automática de dotación hospitalaria.";
-          $color_peq = "background-color: #2BBBEE !important;";
-          $imagen_cata1 = "img/hospitalario/Producto-GABINETE-INTELIGENTE.png";
+          
+          $imagen_cata1 = "img/hospitalario/smart-box--sensación.jpg";
           $banner_b3_p1 = "Smart box monitorea y registra la entrega y devolución de insumos hospitalarios
+                          de gran tamaño y valormáquinaria como monitores cardiacos, instrumental quirúrgico
+                          y más.";
+          $imagen_cata2 = "img/hospitalario/Producto-MD.png";
+          $banner_b3_p2 = "Dispositivo de identificación que sumado al software ICS, permite identificar al
+                          usuario y registrar las devoluciones de los productos retirados previamente de la
+                          dispensadora EAS";
+          $imagen_cata3 = "img/hospitalario/Producto-STORE---S.png";
+          $banner_b3_p3 = "Es un software que permite gestionar la entrega de dotaciones y suministros,
+                          utilizando un método de identificación “escáner” para llevar el control por
+                          usuarios y por productos a entregar.";
+
+          $imagen_cata4 = "img/hospitalario/smart-box--sensación.jpg";
+          $banner_b3_p4 = "Smart box monitorea y registra la entrega y devolución de insumos hospitalarios
                           de gran tamaño y valormáquinaria como monitores cardiacos, instrumental quirúrgico
                           y más.";
           $imagen_cata2 = "img/hospitalario/Producto-MD.png";
@@ -143,6 +321,8 @@ switch ($campaign) {
         ganancias 24/7, entregas 100% automatizadas, retorno de inversión y control total de tu operación.";
         break;
 }
+
+
 
 // define variables and set to empty values
 /* $name = $email = $gender = $comment = $website = ""; */
@@ -215,13 +395,24 @@ function test_input($data)
 
 ?>
 
+<script> 
+if (screen.width < 1024) 
+    $pru = "holaaa" 
+else 
+   if (screen.width < 1280) 
+      document.write ("Mediana") 
+   else 
+      document.write ("Grande") 
+</script>
+
 <script >
-/* document.getElementById('idDelDiv').style.display = 'block'; */
+          var jsVar = "<?php echo $phpVar; ?>";
+          alert('jsVar: ' + jsVar);
+          </script>
 
 
 
 
-  </script>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -245,8 +436,14 @@ function test_input($data)
 <meta name="twitter:title" content="EAS Hospitalario">
 <meta name="twitter:description" content="EAS Hospitalario Tw">
 
+
+<meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/logo inssa.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -294,7 +491,7 @@ function test_input($data)
       id="spinner"
       class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
     >
-      <div class="spinner-grow text-primary" role="status"></div>
+      <div class="spinner-grow <?php echo "{$text_primary}" ?>" role="status"></div>
     </div>
     <!-- Spinner End -->
 
@@ -305,16 +502,16 @@ function test_input($data)
           <div
             class="h-100 d-inline-flex align-items-center border-start border-end px-3"
           >
-            <small class="fa fa-phone-alt me-2 color_boton"></small>
+            <small class="fa fa-phone-alt me-2"></small>
             <small>+57 3107860664</small>
           </div>
           <div class="h-100 d-inline-flex align-items-center border-end px-3">
             <small class="far fa-envelope-open me-2"></small>
-            <small>mercadeo@inssa.com.co</small>
+            <small>mercadeo@inssa.com.co </small>
           </div>
           <div class="h-100 d-inline-flex align-items-center border-end px-3">
             <small class="far fa-clock me-2"></small>
-            <small>Lun - Vie : 07 AM - 05 PM Sab</small>
+            <small>Lun - Vie : 07 AM - 05 PM Sab 07 AM - 10 AM</small>
           </div>
         </div>
         <div class="col-lg-5 px-5 text-end">
@@ -322,8 +519,8 @@ function test_input($data)
             <a class="btn btn-square border-end border-start" href="https://www.facebook.com/INSSASAS"
               ><i class="fab fa-facebook-f"></i
             ></a>
-              <a class="btn btn-square border-end" href=""
-              ><i class="fab fa-linkedin-in"></i
+              <a class="btn btn-square border-end" href="https://www.youtube.com/@inssasas/videos"
+              ><i class="fab fa-youtube"></i
             ></a>
             <a class="btn btn-square border-end" href="https://www.instagram.com/inssasas/"
               ><i class="fab fa-instagram"></i
@@ -350,14 +547,15 @@ function test_input($data)
         class="navbar-toggler"
         data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse"
+        <?php echo "{$navbar}" ?>
       >
 
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-3 py-lg-0">
+      <div class="collapse navbar-collapse" id="navbarCollapse" >
+        <div class="navbar-nav ms-auto py-3 py-lg-0" <?php echo "{$navbar}" ?>>
         <a href="index.html" class="nav-item nav-link active">Inicio</a>
-          <a href="about.html" class="nav-item nav-link">BARI</a>
+          <a href="https://inssa.com.co/lp/apex/?utm_source=ob&utm_campaign=ika&utm_channel=dev#form" class="nav-item nav-link">IKA</a>
           <a href="https://inssa-7363.myshopify.com/" class="nav-item nav-link">Tienda</a>
           <div class="nav-item dropdown">
       </div>
@@ -374,7 +572,7 @@ function test_input($data)
           <div class="carousel-item active">
             <img class="w-100" src=<?php echo "{$banner_i1}" ?> alt="Image" />
             <div class="carousel-caption">
-              <div class="container">
+              <div class="container letra">
                 <div class="row justify-content-center">
                   <div class="col-12 col-lg-10">
                     <h5
@@ -387,19 +585,20 @@ echo "{$banner_b1_l1}";
                     <h1 class="display-2 text-light mb-3 animated slideInDown">
                       <?php
 echo "{$banner_b1_l2}";
-echo "<br>";
-echo "{$banner_b1_l3}";
 ?>
                     </h1>
-                    <a href="https://inssa.com.co/lp/apex/?utm_source=ob&utm_medium=correo&utm_campaign=hospitalario&utm_channel=dev#form" class="btn btn-primary py-3 px-5 color_boton"
-                      >Contáctanos</a
-                    >
+                    
                   </div>
+
+                  <a  href="#form" class="btn btn-primary py-3 px-5 contac <?php echo "{$color_boton}" ?>"
+                      >Contáctanos</a
+                      <?php echo "{$pru}" ?>
+                    >
                 </div>
               </div>
             </div>
           </div>
-        <button
+        <!-- <button
           class="carousel-control-prev"
           type="button"
           data-bs-target="#header-carousel"
@@ -416,7 +615,7 @@ echo "{$banner_b1_l3}";
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
-        </button>
+        </button> -->
       </div>
     </div>
     <!-- Carousel End -->
@@ -433,7 +632,7 @@ echo "{$banner_b1_l3}";
               <img
                 class="position-absolute w-100 h-100"
                 src=<?php echo "{$banner_i2}" ?>
-                alt=""
+                
                 style="object-fit: cover"
               />
               <div
@@ -441,7 +640,7 @@ echo "{$banner_b1_l3}";
                 style="width: 200px; height: 200px"
               >
                 <div
-                  class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3 borde-redondeado color_boton "
+                  class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3 borde-redondeado <?php echo "{$color_boton}" ?> "
                 >
                   <h1 class="text-white">40</h1>
                   <h2 class="text-white">años</h2>
@@ -452,8 +651,8 @@ echo "{$banner_b1_l3}";
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="h-100">
-              <div class="border-start border-5 border-primary ps-4 mb-5">
-                <h1 class="display-6 mb-0">
+              <div class="border-start border-5 <?php echo "{$border_primary}" ?> ps-4 mb-5">
+                <h1 class="display-6 mb-0"> 
 
                 <?php
 echo "{$banner_b2_b1}";
@@ -473,19 +672,19 @@ echo "{$banner_b2_b2}";
                 <div class="row g-4">
                   <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
                     <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                      class="fa fa-check fa-2x <?php echo "{$text_primary}" ?> flex-shrink-0 me-3"
                     ></i>
                     <h6 class="mb-0"><?php echo "{$banner_b2_b3_b1}"; ?> </h6>
                   </div>
                   <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
                     <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                      class="fa fa-check fa-2x <?php echo "{$text_primary}" ?> flex-shrink-0 me-3"
                     ></i>
                     <h6 class="mb-0"><?php echo "{$banner_b2_b3_b2}"; ?> </h6>
                   </div>
                   <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
                     <i
-                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                      class="fa fa-check fa-2x <?php echo "{$text_primary}" ?> flex-shrink-0 me-3"
                     ></i>
                     <h6 class="mb-0"><?php echo "{$banner_b2_b3_b3}"; ?> </h6>
                   </div>
@@ -503,7 +702,7 @@ echo "{$banner_b2_b2}";
       <div class="container">
         <div class="row g-5 align-items-end mb-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="border-start border-5 border-primary ps-4">
+            <div class="border-start border-5 <?php echo "{$border_primary}" ?> ps-4">
               <h6 class="text-body text-uppercase mb-2">Déjate sorprender</h6>
               <h1 class="display-6 mb-0">
                 <?php echo "{$banner_b3_b1}"; ?>
@@ -511,95 +710,95 @@ echo "{$banner_b2_b2}";
             </div>
           </div>
           <!-- <div class="col-lg-6 text-lg-end wow fadeInUp" data-wow-delay="0.3s">
-            <a class="btn btn-primary py-3 px-5 color_boton" href="https://api.whatsapp.com/send?phone=573102242724">Cotizar</a>
+            <a class="btn btn-primary py-3 px-5 <?php echo "{$color_boton}" ?>" href="https://api.whatsapp.com/send?phone=573102242724">Cotizar</a>
           </div> -->
         </div>
 
         <!-- servicios -->
         <div class="row g-4 justify-content-center">
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" id = <?php echo "{$Prod1}"?>>
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src= <?php echo "{$imagen_cata1}" ?> alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src= <?php echo "{$imagen_cata1}" ?>  <?php echo "{$imagen_cata1_sen}" ?> <?php echo "{$imagen_cata1_out}" ?>/>
+              
+              <div class="<?php echo "{$service_text}" ?>  position-relative text-center h-100 p-4">
                 <!-- <h5 class="mb-3">IKA es servicio</h5> -->
                 <p>
                 <?php echo "{$banner_b3_p1}"; ?>
 
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href=""
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" <?php echo "{$Prod2}"?>>
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src= <?php echo "{$imagen_cata2}" ?> alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src= <?php echo "{$imagen_cata2}" ?>  <?php echo "{$imagen_cata2_sen}" ?> <?php echo "{$imagen_cata2_out}" ?>/>
+              <div class="<?php echo "{$service_text}" ?> position-relative text-center h-100 p-4">
                 <!-- <h5 class="mb-3">IKA es asesoría</h5> -->
                 <p>
                 <?php echo "{$banner_b3_p2}"; ?>
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href="https://inssa.com.co/lp/hoja_producto/index.php?utm_source=ob&utm_medium=hospitalario&utm_campaign=MD&utm_channel=dev#form"
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" <?php echo "{$Prod3}"?>>
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src= <?php echo "{$imagen_cata3}" ?> alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src= <?php echo "{$imagen_cata3}" ?>  <?php echo "{$imagen_cata3_sen}" ?> <?php echo "{$imagen_cata3_out}" ?>/>
+              <div class="<?php echo "{$service_text}" ?> position-relative text-center h-100 p-4">
                 <!-- <h5 class="mb-3">IKA es respaldo</h5> -->
                 <p>
-                <?php echo "{$banner_b3_p1}"; ?>
+                <?php echo "{$banner_b3_p3}"; ?>
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href=""
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" <?php echo "{$Prod4}"?> >
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src="img/IKA-4-E-M-COMBI.png" alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src=<?php echo "{$imagen_cata4}" ?>  <?php echo "{$imagen_cata4_sen}" ?> <?php echo "{$imagen_cata4_out}" ?> />
+              <div class="<?php echo "{$service_text}" ?> position-relative text-center h-100 p-4">
                 <h5 class="mb-3">IKA es experiencia  </h5>
                 <p>
-                  De 40 años siendo líderes en brindar soluciones en el mercado del vending.
+                <?php echo "{$banner_b3_p4}"; ?>
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href=""
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s" <?php echo "{$Prod5}"?>>
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src="img/IKA-5-COMBI.png" alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src=<?php echo "{$imagen_cata5}" ?>  <?php echo "{$imagen_cata5_sen}" ?> <?php echo "{$imagen_cata5_out}" ?> />
+              <div class="<?php echo "{$service_text}" ?> position-relative text-center h-100 p-4">
                 <h5 class="mb-3">IKA es tecnología</h5>
                 <p>
-                  Con un equipo especializado en desarrollar
-                  soluciones tecnológicas, para controlar y automatizar su operación.
+                <?php echo "{$banner_b3_p5}"; ?>
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href=""
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s" <?php echo "{$Prod6}"?>>
-            <div class="service-item bg-light overflow-hidden h-100">
-              <img class="img-fluid" src="img/IKA-CONGELADOS.png" alt="" />
-              <div class="service-text position-relative text-center h-100 p-4">
+            <div class="<?php echo "{$service_item}" ?> bg-light overflow-hidden h-100">
+              <img class="img-fluid" src=<?php echo "{$imagen_cata6}" ?>  <?php echo "{$imagen_cata6_sen}" ?> <?php echo "{$imagen_cata6_out}" ?>/>
+              <div class="<?php echo "{$service_text}" ?> position-relative text-center h-100 p-4">
                 <h5 class="mb-3">IKA es cubrimiento a nivel nacional</h5>
                 <p>
-                  IKA es venta, transporte, asesoría, servicio, respaldo y tecnología a nivel nacional.
+                <?php echo "{$banner_b3_p6}"; ?>
                 </p>
-                <a class="small" href=""
-                  >READ MORE<i class="fa fa-arrow-right ms-3"></i
+                <a class="small <?php echo "{$a}"?>" href=""
+                  >CONOCE MÁS<i class="fa fa-arrow-right ms-3"></i
                 ></a>
               </div>
             </div>
@@ -612,7 +811,7 @@ echo "{$banner_b2_b2}";
     <!-- Service End -->
 
     <!-- Appointment Start -->
-    <div
+    <div id="form"
       class="container-fluid appointment my-5 py-5 wow fadeIn"
       data-wow-delay="0.1s"
       <?php echo "{$baner_i3}" ?>
@@ -620,10 +819,10 @@ echo "{$banner_b2_b2}";
     >
 
 
-      <div class="container py-5" id="form">
+      <div class="container py-5" >
         <div class="row g-5">
           <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s" style = "background: rgba(0, 0, 0, .40);">
-            <div class="border-start border-5 border-primary ps-4 mb-5">
+            <div class="border-start border-5 <?php echo "{$border_primary}" ?> ps-4 mb-5">
               <h6 class="text-white text-uppercase mb-2">Contáctanos</h6>
               <h1 class="display-6 text-white mb-0">
               Conéctate directamente con un asesor dejando tus datos de contacto
@@ -753,7 +952,7 @@ echo "{$banner_b2_b2}";
 
                 
 
-                <input class="btn btn-primary w-100 py-3 color_boton" type="submit" name="submit" value="Conectate con un asesor.">
+                <input class="btn btn-primary w-100 py-3 <?php echo "{$color_boton}" ?>" type="submit" name="submit" value="Conectate con un asesor.">
 
 
 
@@ -766,7 +965,7 @@ echo "{$banner_b2_b2}";
 
 ?>
 
-               <!--  <a  class="btn btn-primary w-100 py-3 color_boton" onclick = "clickMe()"
+               <!--  <a  class="btn btn-primary w-100 py-3 <?php echo "{$color_boton}" ?>" onclick = "clickMe()"
                       >Enviar</a> -->
 
 
@@ -840,8 +1039,8 @@ alert(selected); */
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h1 class="text-white mb-4">
-              <!-- <i class="fa fa-building text-primary me-3" src="img/logo inssa.png"></i>Inssa -->
-              <img class="fa fa-building text-primary me-3" src="img/logo inssa.png" width="80" height="60" alt="Image" /> Inssa
+              <!-- <i class="fa fa-building <?php echo "{$text_primary}" ?>-primary me-3" src="img/logo inssa.png"></i>Inssa -->
+              <img class="fa fa-building <?php echo "{$text_primary}" ?> me-3" src="img/logo inssa.png" width="80" height="60" alt="Image" /> Inssa
             </h1>
             <p>
               Somos una organización que cree en los emprendedores y en las empresas.
@@ -903,7 +1102,7 @@ alert(selected); */
           </div> -->
         </div>
       </div>
-      <div class="container-fluid copyright">
+      <!-- <div class="container-fluid copyright">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -917,13 +1116,13 @@ alert(selected); */
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg color_boton btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up color_boton"></i
+    <a href="#" class="btn btn-lg <?php echo "{$color_boton}" ?> btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up <?php echo "{$color_boton}" ?>"></i
     ></a>
 
     <!-- JavaScript Libraries -->
@@ -935,7 +1134,7 @@ alert(selected); */
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <!--     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
  -->
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 
 
